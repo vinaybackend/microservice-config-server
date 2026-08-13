@@ -8,7 +8,7 @@ spring:
       port: 27017
       database: quizdb
 config:
-    value: "quiz-service,we are in dev"
+    value: "quiz-service,we are in dev add new changin"
 server:
   port: 9092
 
