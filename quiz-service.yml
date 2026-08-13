@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: quiz-service
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: quizdb
+config:
+    value: "quiz-service,we are in default"
+server:
+  port: 9092
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+
+
