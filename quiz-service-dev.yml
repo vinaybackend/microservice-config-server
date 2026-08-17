@@ -15,7 +15,7 @@ spring:
     password: guest
 
 config:
-  value: "quiz-service,we are in dev"
+  value: "quiz-service,we are in dev after change"
 
 server:
   port: 9092
