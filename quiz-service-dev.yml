@@ -7,17 +7,28 @@ spring:
       host: localhost
       port: 27017
       database: quizdb
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 config:
-    value: "quiz-service,we are in dev add new changin"
+  value: "quiz-service,we are in dev add new changin"
+
 server:
   port: 9092
-
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-      
+    register-with-eureka: true
+    fetch-registry: true
+    refresh:
+      enable: false
+
 management:
   endpoints:
     web:
