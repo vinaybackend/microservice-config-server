@@ -14,17 +14,19 @@ spring:
     username: guest
     password: guest
 
-  
+  cloud:
+    function:
+      definition: "information"
 
     stream:
       bindings:
         information-out-0:
-          destination: "information-exchange"
+          destination: "${spring.application.name}-exchange"
           content-type: "text/plain"
 
         informationConsumer-in-0:
-          destination: "information-exchange"
-          group: "quiz-consumer"
+          destination: "${spring.application.name}-exchange"
+          group: "${spring.application.name}"
           content-type: "text/plain"
 
   config:
