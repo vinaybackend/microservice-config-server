@@ -18,9 +18,6 @@ spring:
     function:
       definition: information
 
-server:
-  port: 9092  
-
 config:
   value: "quiz-service,we are in dev after change"
 
