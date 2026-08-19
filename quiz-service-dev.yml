@@ -14,9 +14,7 @@ spring:
     username: guest
     password: guest
 
-  cloud:
-    function:
-      definition: "information;informationConsumer"
+  
 
     stream:
       bindings:
