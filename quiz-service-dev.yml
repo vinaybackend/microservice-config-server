@@ -15,14 +15,11 @@ spring:
     password: guest
 
   cloud:
-    function:
-      definition: "information"
-
     stream:
       bindings:
-        information-out-0:
-          destination: "${spring.application.name}-exchange"
-          content-type: "text/plain"
+        quizCreatedBinding-out-0:
+          destination: "quiz-created"
+          group: "${spring.application.name}"
 
         informationConsumer-in-0:
           destination: "${spring.application.name}-exchange"
