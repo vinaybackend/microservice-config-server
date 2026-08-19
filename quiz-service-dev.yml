@@ -16,10 +16,21 @@ spring:
 
   cloud:
     function:
-      definition: information
+      definition: "information;informationConsumer"
 
-config:
-  value: "quiz-service,we are in dev after change"
+    stream:
+      bindings:
+        information-out-0:
+          destination: "information-exchange"
+          content-type: "text/plain"
+
+        informationConsumer-in-0:
+          destination: "information-exchange"
+          group: "quiz-consumer"
+          content-type: "text/plain"
+
+  config:
+    value: "quiz-service,we are in dev after change"
 
 server:
   port: 9092
@@ -27,7 +38,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: "http://localhost:8761/eureka/"
     register-with-eureka: true
     fetch-registry: true
     refresh:
