@@ -9,16 +9,19 @@ spring:
       database: quizdb
       
 
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+  # rabbitmq:
+  #   host: localhost
+  #   port: 5672
+  #   username: guest
+  #   password: guest
 
   cloud:
     function:
       definition: getQuizBinding
     stream:
+      kafka:
+        binder:
+          brokers: localhost:9098
       bindings:
 
         # OUTPUT
