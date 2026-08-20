@@ -22,7 +22,7 @@ spring:
           group: "${spring.application.name}"
 
         getQuizBinding-in-0:
-          destination: "quiz-created"
+          destination: "questions-generated"
           group: "${spring.application.name}"
           content-type: "text/plain"
 
