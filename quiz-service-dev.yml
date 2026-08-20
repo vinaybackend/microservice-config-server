@@ -17,14 +17,16 @@ spring:
   cloud:
     stream:
       bindings:
-        quizCreatedBinding-out-0:
-          destination: "quiz-created"
-          group: "${spring.application.name}"
 
+        # OUTPUT
+        quizCreatedBinding-out-0:
+          destination: quiz-created
+
+        # INPUT
         getQuizBinding-in-0:
-          destination: "questions-generated"
-          group: "${spring.application.name}"
-          content-type: "text/plain"
+          destination: questions-generated
+          group: ${spring.application.name}
+          content-type: text/plain
 
   config:
     value: "quiz-service,we are in dev after change"
