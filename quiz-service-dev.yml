@@ -21,8 +21,8 @@ spring:
           destination: "quiz-created"
           group: "${spring.application.name}"
 
-        informationConsumer-in-0:
-          destination: "${spring.application.name}-exchange"
+        getQuizBinding-in-0:
+          destination: "quiz-created"
           group: "${spring.application.name}"
           content-type: "text/plain"
 
